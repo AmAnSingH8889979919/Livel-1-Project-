@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+  *{
+    padding: 8px;
+  }
+  .link a{
+    border: solid 1px rgb(158, 95, 172);
+    color: white;
+    justify-content: space-between;
+  }
+  body{
+    background-color: rgb(200, 180, 224);
+  }
+  #logo{
+    width: 50px;
+    height: auto;
+    border-top: 0mm;
+    border: solid rgba(236, 234, 208, 0.786);
+    border-radius: 40%;
+  }
+  #btn{
+    display: none;
+  }
+  .nav{
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(208, 161, 218);
+    padding: auto;
+    flex-wrap: wrap;
+  }
+   @media only screen and (max-width:600px){
+    .link{
+      display: none;
+    }
+    .chat-us{
+      display: none;
+    }
+    #btn{
+    display: block;
+  }
+}
+#parent-1{
+     border-bottom: 30px;
+    border-color: black;
+ }
+ #title{
+    text-align: center;
+    width: 80%;
+    height: auto;
+    justify-content: center;
+    background-image: url(data:image/jpeg;base64,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);
+    padding: 5px;
+    word-spacing: 10px;
+    margin: 0 auto;
+    letter-spacing: 10px;
+ }
+#Bhagat_Singh{
+  width: 150px;
+  height: auto;
+  justify-content: center;
+  border: solid gray;
+  border-radius: 10%;
+}
+#section-1{
+  background-color: rgb(270, 225, 175);
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  border: 1em;
+  margin: 10px;
+  width: 85%;
+  margin: 10%;
+}
+#aside-1{
+  background-color: rgb(218, 240, 233);
+  margin-right: 30px;
+  justify-content: center;
+}
+#button-1{
+    background-color: #53505d;
+  border: 5px;
+  color: white;
+  border-radius: 10%;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 1px 1px;
+  cursor: pointer;
+  justify-content: end;
+}
+#sectino-2{
+  display: flex;
+  justify-content: center;
+ align-items: center; 
+}
+#div-3{
+  width: 90%;
+  display: grid;
+  grid-template-columns: auto auto ;
+  justify-content: space-between;
+  background-color: rgb(223, 152, 251);
+  justify-content: space-between;
+  margin-left: 5%;
+}
+#img-1{
+   align-items: center;
+   text-align: center;
+   margin-right: 8px;
+}
+#img{
+  width: 200px;
+  height: auto;
+  border: solid rgb(236, 220, 225);
+  border-radius: 7%;
+}
+footer {
+  text-align: center;
+  padding: 8px;
+  justify-content: center;
+  background-color: rgb(93, 83, 94);
+  color: white;
+  margin: 15px;
+}
+.fa {
+  padding: 15px;
+  font-size: 18px;
+  width: 20px;
+  text-align: center;
+  text-decoration: none;
+  margin: 4px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 1.0;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #d8935f;
+  color: white;
+}
+.fa-instagram {
+  background: #6186a0;
+  color: white;
+}
+</style>
+<body> 
+  <nav class="nav">
+    <div>
+      <img id="logo" alt="logo" src="https://media-exp1.licdn.com/dms/image/C5603AQExByM6jTdbIA/profile-displayphoto-shrink_200_200/0/1655226585608?e=1662595200&v=beta&t=yN1M0DGgpK6esJzLqwc-dDh7GY-fPcN-iivRM29hwcg">
+    </div>
+    <div class="link">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <input class="chat-us" placeholder="Search">
+    <button id="btn">Button</button>
+  </nav>
+  <header>
+    <div id="parent-1">
+        <div id="title"><h1> <span>B</span>hagat <span>S</span>ingh</h1></div> 
+    </div>
+        </header>
+  <section id="section-1">
+    <aside id="aside-1"> 
+     <h3>The great Line by great man "Bhagat Singh"</h3> 
+     <ul>
+      <li>They may kill me, but they cannot kill my ideas. They can crush my body, but they will not be able to crush my spirit</li>
+     <li>Revolution is an inalienable right of mankind. Freedom is an imperishable birth right of all</li>
+     <li>I am full of ambition and hope and charm of life. But I can renounce everything at the time of need</li>
+     <li>If the deaf have to hear, the sound has to be very loud</li>
+    </ul>
+    <p><samp style="color:rgb(198, 130, 160)">If you want to read more thought<button><a id="button-1" href="https://www.ndtv.com/india-news/bhagat-singhs-birth-anniversary-10-best-quotes-of-the-freedom-fighter-2302075">Click</a></button></samp></p>
+    </aside>
+    <main id="main-1">
+      <div>
+        <p>
+          Born
+          <br>
+          27 September 1907[a] Banga, Lyallpur District, Punjab Province, British India (present-day Faisalabad District, Punjab, Pakistan)
+          <br> 
+          Died
+          <br>
+          23 March 1931 (aged 23) Lahore Central Jail, Lahore, Lahore Division, Punjab Province, British India (present-day Lahore District, Punjab, Pakistan) 
+          <section id="sectino-2">
+            <div>
+              <img id="Bhagat_Singh" alt="Bhagat Singh" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Bhagat_Singh_1929.jpg/640px-Bhagat_Singh_1929.jpg">
+              <p id="pic-tital-1"><u>Bhagat Singh</u></p>
+            </div>
+            <div>
+              <p>Bhagat Singh’s contribution to India’s freedom struggle.
+                <br>
+                Bhagat Singh founded the Naujawan Bharat Sabha in the year 1926 to encourage the peasants and workers to fight against British rule. He was the secretary of that organisation. In 1928, the Hindustan Socialist Association (HSRA) was also established by him, along with Sukhdev, Chandrasekhar Azad and others.</p>
+              <p>Bhagat Singh’s contribution to India’s freedom struggle <br>
+                Bhagat Singh founded the Naujawan Bharat Sabha in the year 1926 to encourage the peasants and workers to fight against British rule. He was the secretary of that organisation. In 1928, the Hindustan Socialist Association (HSRA) was also established by him, along with Sukhdev, Chandrasekhar Azad and others.</p>
+            </div>
+          </section>
+          <p>Bhagat Singh (born September 27, 1907, Lyallpur, western Punjab, India [now in Pakistan]—died March 23, 1931, Lahore [now in Pakistan]), revolutionary hero of the Indian independence movement.
+            Bhagat Singh attended Dayanand Anglo Vedic High School, which was operated by Arya Samaj (a reform sect of modern Hinduism), and then National College, both located in Lahore. He began to protest British rule in India while still a youth and soon fought for national independence. He also worked as a writer and editor in Amritsar for Punjabi- and Urdu-language newspapers espousing Marxist theories. He is credited with popularizing the catchphrase “Inquilab zindabad” (“Long live the revolution”).</p>
+        </p>
+      </div>
+    </main>
+  </section>
+  <div id="div-3">
+    <div id="img-1">
+      <img id="img" alt="Aman Singh" src="https://scontent.fbho1-4.fna.fbcdn.net/v/t1.18169-9/21686411_454241588302521_2515026802313626876_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=174925&_nc_ohc=TaLOInOUN-cAX9yDbb9&_nc_ht=scontent.fbho1-4.fna&oh=00_AT8lN_EGlOj007_Z6oERmXMV5nZyvX2-gPOvkhvwSpxUnQ&oe=62F07F3C">
+       <h5><u>Aman Singh</u></h5>
+    </div>
+    <div>
+      <h3>Some Information About me</h3>
+      <p>Hey<br>I am Aman Singh,<br>
+        I have thought of doing something big with dreams in my heart and I will
+        work day and night for it. during this journey I am learning a lot, missing a lot. but whatever happens,
+        I will not hold back my hand from working hard.<br>
+        I have tried to pay a small <span style=" font-style: italic;">Tribute</span> to <span style=" font-style: italic;">Bhagat Singh</span> 
+         I hope you guys  liks my efforts. 
+      </p>
+      <form action="post" id="post">
+        <p><label for="feedback"> Your feedback is important to me:</label></p>
+        <textarea id="feedback" name="feedback" rows="4" cols="50">
+        </textarea>
+        <br>
+        <input type="submit" value="Submit" id="Submit">
+      </form>
+    </div>
+  </div>
+  <footer>
+    <span> 2022 &copy; Aman Singh </span>
+<div class="social-display">
+        <div class="social-links">
+            <span>
+                <a href="" class="facebook">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z"/></svg>
+                </a>
+            </span>
+            <span>
+                <a href="" class="twitter">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M22.162 5.656a8.384 8.384 0 0 1-2.402.658A4.196 4.196 0 0 0 21.6 4c-.82.488-1.719.83-2.656 1.015a4.182 4.182 0 0 0-7.126 3.814 11.874 11.874 0 0 1-8.62-4.37 4.168 4.168 0 0 0-.566 2.103c0 1.45.738 2.731 1.86 3.481a4.168 4.168 0 0 1-1.894-.523v.052a4.185 4.185 0 0 0 3.355 4.101 4.21 4.21 0 0 1-1.89.072A4.185 4.185 0 0 0 7.97 16.65a8.394 8.394 0 0 1-6.191 1.732 11.83 11.83 0 0 0 6.41 1.88c7.693 0 11.9-6.373 11.9-11.9 0-.18-.005-.362-.013-.54a8.496 8.496 0 0 0 2.087-2.165z"/></svg>
+                </a>
+            </span>
+           <span>
+            <a href="" class="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm0-2a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm6.5-.25a1.25 1.25 0 0 1-2.5 0 1.25 1.25 0 0 1 2.5 0zM12 4c-2.474 0-2.878.007-4.029.058-.784.037-1.31.142-1.798.332-.434.168-.747.369-1.08.703a2.89 2.89 0 0 0-.704 1.08c-.19.49-.295 1.015-.331 1.798C4.006 9.075 4 9.461 4 12c0 2.474.007 2.878.058 4.029.037.783.142 1.31.331 1.797.17.435.37.748.702 1.08.337.336.65.537 1.08.703.494.191 1.02.297 1.8.333C9.075 19.994 9.461 20 12 20c2.474 0 2.878-.007 4.029-.058.782-.037 1.309-.142 1.797-.331.433-.169.748-.37 1.08-.702.337-.337.538-.65.704-1.08.19-.493.296-1.02.332-1.8.052-1.104.058-1.49.058-4.029 0-2.474-.007-2.878-.058-4.029-.037-.782-.142-1.31-.332-1.798a2.911 2.911 0 0 0-.703-1.08 2.884 2.884 0 0 0-1.08-.704c-.49-.19-1.016-.295-1.798-.331C14.925 4.006 14.539 4 12 4zm0-2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153a4.908 4.908 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 0 1-1.153 1.772 4.915 4.915 0 0 1-1.772 1.153c-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 0 1-1.772-1.153 4.904 4.904 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 0 1 1.153-1.772A4.897 4.897 0 0 1 5.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2z"/></svg>
+            </a>
+           </span>
+           
+           <a href="/youtube-channel" class="youtube-channel-link"> 
+            <svg viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M21.543 6.498C22 8.28 22 12 22 12s0 3.72-.457 5.502c-.254.985-.997 1.76-1.938 2.022C17.896 20 12 20 12 20s-5.893 0-7.605-.476c-.945-.266-1.687-1.04-1.938-2.022C2 15.72 2 12 2 12s0-3.72.457-5.502c.254-.985.997-1.76 1.938-2.022C6.107 4 12 4 12 4s5.896 0 7.605.476c.945.266 1.687 1.04 1.938 2.022zM10 15.5l6-3.5-6-3.5v7z"/></svg>
+            
+        </a>
+        </div>            
+    </div>
+</footer>
+</body>
+</html>
